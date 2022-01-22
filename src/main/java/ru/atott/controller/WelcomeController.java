@@ -5,6 +5,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
+
 @Controller
 public class WelcomeController {
 
@@ -13,6 +15,12 @@ public class WelcomeController {
             @RequestParam(name="name", required=false, defaultValue="Anton") String name,
             Model model) {
         model.addAttribute("name", name);
+        return "greeting";
+    }
+
+    @GetMapping("/echo")
+    public String echo(HttpServletRequest request, Model model) {
+        model.addAttribute("name", request.getRequestURL().toString());
         return "greeting";
     }
 }
