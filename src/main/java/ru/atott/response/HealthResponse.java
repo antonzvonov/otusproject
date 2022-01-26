@@ -18,6 +18,4 @@ public class HealthResponse {
     public void setStatus(String status) {
         this.status = status;
     }
-
-    public static final HealthResponse OK = new HealthResponse("OK");
 }
