@@ -29,4 +29,9 @@
             <column name="phone" type="varchar(20)"/>
         </addColumn>
     </changeSet>
+    <changeSet id="4" author="AZ">
+        <insert tableName="users">
+            <column name="username" value="Test user"/>
+        </insert>
+    </changeSet>
 </databaseChangeLog>
