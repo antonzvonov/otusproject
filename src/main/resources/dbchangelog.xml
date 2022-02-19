@@ -39,4 +39,5 @@
             <column name="username" value="Test user2"/>
         </insert>
     </changeSet>
+    
 </databaseChangeLog>
