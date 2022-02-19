@@ -34,4 +34,9 @@
             <column name="username" value="Test user"/>
         </insert>
     </changeSet>
+    <changeSet id="5" author="AZ">
+        <insert tableName="users">
+            <column name="username" value="Test user2"/>
+        </insert>
+    </changeSet>
 </databaseChangeLog>
