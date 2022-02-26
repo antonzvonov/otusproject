@@ -10,6 +10,11 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 public class WelcomeController {
 
+    @GetMapping("/")
+    public String main() {
+        return "main";
+    }
+
     @GetMapping("/greeting")
     public String greeting(
             @RequestParam(name="name", required=false, defaultValue="Anton") String name,
